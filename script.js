@@ -346,7 +346,7 @@ const OS = {
         </div>
         <div class="trackListWrap">
           <div class="playlistBanner">
-            <div class="playlistBannerInfo">
+            <div class="playlistBannerInfo" role="button">
               <div class="playlistBannerName">${pl.name}</div>
               <div class="playlistBannerCount">${pl.tracks.length} tracks</div>
             </div>
@@ -377,8 +377,7 @@ const OS = {
         row.id = `track-row-${i}`;
         row.innerHTML = `
           <div class="trackNum">${i + 1}</div>
-          <img class="trackThumb" src="${pl.cover}" onerror="this.style.opacity=0" alt="", width="75">
-          <div class="trackInfo">
+          <div class="trackInfo role="button"">
             <div class="trackName" id="track-name-${i}">${this._stripExt(filename)}</div>
             <div class="trackArtist" id="track-artist-${i}">—</div>
           </div>
